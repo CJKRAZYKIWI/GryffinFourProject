@@ -1,3 +1,4 @@
+
 @mixin button {
     height: 50px;
     width: 300px;
@@ -9,16 +10,17 @@
     text-align: center;
 }
 
+
 .gray {
-    background: #B3B3B3;
+    background: #a01d1d99;
 }
 
 .green {
-    background: #00CB79;
+    background: #ff0000;
 }
 
 .card {
-    min-height: 736px;
+    min-height: 936px;
     max-height: 994px;
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.06);
@@ -53,22 +55,24 @@
     }
 
     &__generate {
-        background-color: #00CB79;
+        background-color: #4a0c0c8a;
         transform: translateY(50%);
         @include button;
     }
 
     &__clear {
         transform: translateY(50%);
-        background-color: #45B0E5;
+        background-color: #81181280;
         @include button;
     }
 
     &__content {
         width: 1100px;
         height: 297px;
-        background-color: #fffdfd;
-        color: black;
+        background-image: linear-gradient(rgb(184, 58, 58),rgb(0, 0, 0));
+        color: rgb(255, 255, 255);
+        opacity: 0.8;
+       
 
         justify-self: center;
         margin-bottom: 84px;
@@ -79,9 +83,9 @@
             height: 18px;
             width: 18px;
             line-height: 22px;
-            background-color: black;
+            background-color: rgb(0, 0, 0);
             border-radius: 50%;
-            font-size: 14px;
+            font-size: 29px;
          
             text-align: center;
             color: white;
@@ -93,7 +97,7 @@
         p {
             line-height: 29px;
             padding: 50px 47px;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 300;   
         }
     }

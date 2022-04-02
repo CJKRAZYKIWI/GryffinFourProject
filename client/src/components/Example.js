@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Content from './content'
 import Input from './input'
+import '../style/example.scss';
 
 const Initial_State = {
     nounOne: '', 
@@ -51,6 +52,8 @@ class Example extends Component {
         ]
         
         return (
+            <div id= 'ExampleForm' style={{
+                backgroundImage: 'url("https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")'}}> 
             <form onSubmit={this.handleFormSubmit}>
                 <div className="card__inputs">
                     {
@@ -59,11 +62,12 @@ class Example extends Component {
                         })
                     }
                 </div>
-                <button className={`card__${!this.state.contentVisible ? 'generate' : 'clear'}`} type="submit">{!this.state.contentVisible ? 'Generate Madlib' : 'Clear Form'} </button>
+                <button className={`card__${!this.state.contentVisible ? 'generate' : 'clear'}`} type="submit">{!this.state.contentVisible ? 'Enter Castle' : 'Leave'} </button>
                 {
                     this.state.contentVisible ? <Content data={this.state} /> : ''
                 }
             </form>
+            </div>
         )
     }
 }

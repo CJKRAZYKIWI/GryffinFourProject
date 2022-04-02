@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav"
 import MadlibHome from './components/MadlibHome'
 import CreateMadLib from "./components/CreateMadLib"
 import Example from './components/Example';
+import React from "react"
 
 function App() {
   const [ data, setData ] = useState('')

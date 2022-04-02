@@ -1,3 +1,4 @@
+import React from "react"
 function CreateMadLib(props) {
     const data = props.data
 
@@ -41,6 +42,27 @@ function CreateMadLib(props) {
                 placeholder="Enter story content"
                 required>
                 </textarea>
+                <label htmlFor="Legend">Click the short codes below</label>
+                <ul>
+                    <li> 
+                        <a href="javascript:return(false);" class = "button-submit button-shortcode" onclick="document.getElementById('content').insertAtCaret('[NOUN]');return(false);">[NOUN]</a>
+                    </li>
+                    <li> 
+                        <a href="javascript:return(false);" class = "button-submit button-shortcode" onclick="document.getElementById('content').insertAtCaret('[ADJECTIVE]');return(false);">[ADJECTIVE]</a>
+                    </li>
+                    <li> 
+                        <a href="javascript:return(false);" class = "button-submit button-shortcode" onclick="document.getElementById('content').insertAtCaret('[VERB]');return(false);">[VERB]</a>
+                    </li>
+                    <li> 
+                        <a href="javascript:return(false);" class = "button-submit button-shortcode" onclick="document.getElementById('content').insertAtCaret('[PERSONS NAME]');return(false);">[PERSONS NAME]</a>
+                    </li>
+                </ul>
+                <label htmlFor= "Custom"> HELLO </label>
+                <li>
+                    <a href="#" class= "button-submit button-shortcode" onclick="document.getElementById('content').insertAtCaret('['+document.getElementById('custom').value+]');return(false);">[CUSTOM]</a>
+                    "-"
+                    <input type="text" class= "custom-shortcode" name="custom" id="custom" placeholder="helllo" value></input>
+                </li>
                 <input type="submit"/>
             </form>
         </div>
